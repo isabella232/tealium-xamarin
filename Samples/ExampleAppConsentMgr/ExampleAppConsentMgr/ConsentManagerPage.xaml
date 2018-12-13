@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ExampleAppConsentMgr.ConsentManagerPage">
+    <ContentPage.Content>
+        
+        
+    </ContentPage.Content>
+    <StackLayout>
+         <!-- Place new controls here -->
+        <Label Text="Consent Management" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Start" 
+               FontSize="26"
+               Margin="15" />
+        
+        <Label Text="Consent Status:" Margin="5" />
+        <Label x:Name="lbl_consent_status" 
+               Text="{Binding SelectedStatus}" 
+               Margin="5" 
+               FontSize="22"
+               FontAttributes="Bold" />
+            
+        <Button x:Name="btn_toggle_consented" 
+                Text="Toggle Consented"
+                Clicked="ToggleConsent_Clicked">
+        </Button>   
+                
+        <Button x:Name="btn_reset_consent" 
+                Text="Reset Consent Status"
+                Clicked="ResetConsent_Clicked">
+        </Button>
+        
+        <Button x:Name="btn_save_consent" 
+                Text="Save"
+                IsEnabled="{Binding IsDirty}"
+                Clicked="SaveConsent_Clicked">
+        </Button>
+        
+        <ListView ItemsSource="{Binding SelectedCategoriesView}">
+            <ListView.Header>
+                Categories
+            </ListView.Header>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Name}" />
+                            <Switch Grid.Column="1" IsToggled="{Binding OptedIn}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
