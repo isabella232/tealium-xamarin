@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TealiumXamarinExample.Views.ConsentManagerPage"
+             xmlns:vm="clr-namespace:TealiumXamarinExample.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:ConsentManagerViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="30,24,30,24" IsEnabled="{Binding IsConsentManagerEnabled}">
+            <Grid Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label x:Name="lbl_Title"
+                       Text="Consent Manager:"
+                       FontSize="20" >
+                </Label>
+                <Label x:Name="lbl_ConsentEnabledBinding"
+                       Grid.Column="1"
+                       Text="{Binding IsConsentEnabledString}"
+                       FontSize="22"
+                       FontAttributes="Bold">
+                </Label>
+                <Label x:Name="lbl_ConsentPolicy"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       Text="Consent Policy:"
+                       FontSize="20">
+                </Label>
+                <Label x:Name="lbl_ConsentPolicyBinding"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Text="{Binding ConsentPolicy}"
+                       FontSize="22"
+                       FontAttributes="Bold">
+                </Label>
+                <Label x:Name="lbl_ConsentStatus"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       Text="Consent Status:"
+                       FontSize="20">
+                </Label>
+                <Label x:Name="lbl_ConsentStatusBinding"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       Text="{Binding UserConsentStatus}"
+                       FontSize="22"
+                       FontAttributes="Bold">
+                </Label>
+            </Grid>
+
+            <Button x:Name="btn_ToggleConsented" 
+                    Text="Toggle Consented"
+                    Command="{Binding CallToggleConsented}">
+            </Button>
+
+            <Button x:Name="btn_ResetConsent" 
+                    Text="Reset Consent Status"
+                    Command="{Binding CallResetConsent}">
+            </Button>
+
+            <ListView Margin="0,10,0,0" ItemsSource="{Binding Categories}">
+                <ListView.Header>
+                    Categories
+                </ListView.Header>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" />
+                                <Switch Grid.Column="1" IsToggled="{Binding OptedIn}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

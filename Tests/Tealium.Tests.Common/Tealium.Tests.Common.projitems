@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{65F335B1-851F-4FD2-B839-7C424A51D477}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Tealium.Tests.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstanceFactoryTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstanceManagerTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumConfigHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstanceTrackingTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstancePersistentDataSourcesTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstanceRemoteCommandsTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestRemoteCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RemoteCommandResponseTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RemoteCommandPayloadTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TaskWaitHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackingAndRemoteCommandAcceptanceTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DispatchTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DummyTealium.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TealiumInstanceConsentManagerTestsBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KeyedCollectionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TaliumInstanceListenersTestsBase.cs" />
+  </ItemGroup>
+</Project>

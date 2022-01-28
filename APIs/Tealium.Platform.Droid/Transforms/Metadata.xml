@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<remove-node path="/api/package[starts-with(@name,'com.tealium.core.messaging')]/class[substring(@name, string-length(@name) &#xA;                          - string-length('Messenger') + 1)  = 'Messenger']" />
+	<!-- Fix up all Companion fields which get clobbered by the nested Class of the same name -->
+	<attr path="/api/package[starts-with(@name, 'com.tealium')]/class/field[@name='Companion']" name="managedName">CompanionInstance</attr>
+	<attr path="/api/package[@name='com.tealium.core.validation']/interface[@name='DispatchValidator']/method[@name='ShouldQueue']" name="visibility">true</attr>
+</metadata>

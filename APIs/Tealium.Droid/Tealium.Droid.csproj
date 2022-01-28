@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="..\..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProjectGuid>{7A094B0E-8BAE-4EC5-8164-3E8B66B335A1}</ProjectGuid>
+		<ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Tealium.Droid</RootNamespace>
+		<AssemblyName>Tealium.Droid</AssemblyName>
+		<TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+		<AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+		<AndroidResgenClass>Resource</AndroidResgenClass>
+		<MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+		<MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+		<Description>Provides a unified C# interface for native Tealium APIs for Xamarin.
+Contains Tealium's cross-platform interfaces implementations for Android platform.</Description>
+		<Owners>Tealium</Owners>
+		<PackageTags>Tealium Android</PackageTags>
+		<ReleaseVersion>2.0.0</ReleaseVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\Debug</OutputPath>
+		<DefineConstants>DEBUG;</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<AndroidLinkMode>None</AndroidLinkMode>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\Release</OutputPath>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<AndroidManagedSymbols>true</AndroidManagedSymbols>
+		<AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+		<CustomCommands>
+		  <CustomCommands>
+		    <Command>
+		      <type>AfterBuild</type>
+		      <command>cp ${TargetFile} ${SolutionDir}/Distribution</command>
+		    </Command>
+		  </CustomCommands>
+		</CustomCommands>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Core" />
+		<Reference Include="Mono.Android" />
+		<Reference Include="Xamarin.Jetbrains.Annotations">
+			<HintPath>..\..\packages\Xamarin.Jetbrains.Annotations.13.0.0.4\lib\monoandroid90\Xamarin.Jetbrains.Annotations.dll</HintPath>
+		</Reference>
+		<Reference Include="Java.Interop" />
+		<Reference Include="Xamarin.Kotlin.StdLib.Common">
+			<HintPath>..\..\packages\Xamarin.Kotlin.StdLib.Common.1.5.10\lib\monoandroid90\Xamarin.Kotlin.StdLib.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.Kotlin.StdLib">
+			<HintPath>..\..\packages\Xamarin.Kotlin.StdLib.1.5.10\lib\monoandroid90\Xamarin.Kotlin.StdLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.KotlinX.Coroutines.Core.Jvm">
+			<HintPath>..\..\packages\Xamarin.KotlinX.Coroutines.Core.Jvm.1.5.0\lib\monoandroid90\Xamarin.KotlinX.Coroutines.Core.Jvm.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.KotlinX.Coroutines.Core">
+			<HintPath>..\..\packages\Xamarin.KotlinX.Coroutines.Core.1.5.0\lib\monoandroid90\Xamarin.KotlinX.Coroutines.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Xamarin.KotlinX.Coroutines.Android">
+			<HintPath>..\..\packages\Xamarin.KotlinX.Coroutines.Android.1.5.0\lib\monoandroid90\Xamarin.KotlinX.Coroutines.Android.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Resources\Resource.designer.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<Compile Include="TealiumInstanceFactoryDroid.cs" />
+		<Compile Include="TealiumDroidImpl.cs" />
+		<Compile Include="RemoteCommandPayloadDroid.cs" />
+		<Compile Include="RemoteCommandDroid.cs" />
+		<Compile Include="NativeInterop\JavaDictionaryToClrDictionaryConverter.cs" />
+		<Compile Include="NativeInterop\JavaToClrConverter.cs" />
+		<Compile Include="NativeInterop\JavaObjectTypeHelper.cs" />
+		<Compile Include="RemoteCommandResponseDroid.cs" />
+		<Compile Include="DispatchDroid.cs" />
+		<Compile Include="EventListenersAndDispatchValidation.cs" />
+		<Compile Include="ConsentManagerDroid.cs" />
+		<Compile Include="VisitorProfileDroid.cs" />
+		<Compile Include="NativeInterop\Extensions.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Resources\AboutResources.txt" />
+		<None Include="packages.config" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidResource Include="Resources\values\Strings.xml" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Tealium.Platform.Droid\Tealium.Platform.Droid.csproj">
+			<Project>{18E57B5C-52CD-439A-ACF8-9ABBB2110037}</Project>
+			<Name>Tealium.Platform.Droid</Name>
+		</ProjectReference>
+		<ProjectReference Include="..\Tealium.Common\Tealium.Common.csproj">
+			<Project>{3376C602-7D67-4D03-A3E3-80349C33CBD4}</Project>
+			<Name>Tealium.Common</Name>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="NativeInterop\" />
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+	<Import Project="..\..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
+</Project>

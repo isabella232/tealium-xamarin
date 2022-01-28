@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15A4960126D6383F00193413 /* stubs in Resources */ = {isa = PBXBuildFile; fileRef = 15A4960026D6383F00193413 /* stubs */; };
+		15A4960326D638C300193413 /* VisitorProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A4960226D638C300193413 /* VisitorProfileTests.m */; };
+		15DE989126D5493C00A12767 /* ConsentMockDiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988926D5493B00A12767 /* ConsentMockDiskStorage.swift */; };
+		15DE989226D5493C00A12767 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988A26D5493B00A12767 /* TestHelper.swift */; };
+		15DE989326D5493C00A12767 /* RemoteCommandWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988B26D5493B00A12767 /* RemoteCommandWrapperTests.m */; };
+		15DE989426D5493C00A12767 /* TealiumConfigWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988C26D5493B00A12767 /* TealiumConfigWrapperTests.m */; };
+		15DE989526D5493C00A12767 /* ConsentManagerWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988E26D5493C00A12767 /* ConsentManagerWrapperTests.m */; };
+		15DE989626D5493C00A12767 /* TealiumWrapperCocoapodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988F26D5493C00A12767 /* TealiumWrapperCocoapodsTests.m */; };
+		15DE989926D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE989826D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m */; };
+		15DEE25B2784604E0011B7B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEE25A2784604E0011B7B7 /* AppDelegate.swift */; };
+		15DEE25F2784604E0011B7B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEE25E2784604E0011B7B7 /* ViewController.swift */; };
+		15DEE2622784604E0011B7B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DEE2602784604E0011B7B7 /* Main.storyboard */; };
+		15DEE2642784604F0011B7B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DEE2632784604F0011B7B7 /* Assets.xcassets */; };
+		15DEE2672784604F0011B7B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DEE2652784604F0011B7B7 /* LaunchScreen.storyboard */; };
+		A46863408B2288ACC145602C /* Pods_TealiumWrapperCocoapods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBF9ADBBACFAC0C1646F4EA /* Pods_TealiumWrapperCocoapods_Tests.framework */; };
+		F5DECA4FDCEA52035E3369BD /* Pods_TealiumWrapperSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D725AB14BF89B876AF224321 /* Pods_TealiumWrapperSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		130EFF9C33569C30E79144F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		15A4960026D6383F00193413 /* stubs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stubs; sourceTree = "<group>"; };
+		15A4960226D638C300193413 /* VisitorProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorProfileTests.m; sourceTree = "<group>"; };
+		15DE988826D5493A00A12767 /* TealiumWrapperCocoapods_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TealiumWrapperCocoapods_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
+		15DE988926D5493B00A12767 /* ConsentMockDiskStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentMockDiskStorage.swift; sourceTree = "<group>"; };
+		15DE988A26D5493B00A12767 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		15DE988B26D5493B00A12767 /* RemoteCommandWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteCommandWrapperTests.m; sourceTree = "<group>"; };
+		15DE988C26D5493B00A12767 /* TealiumConfigWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TealiumConfigWrapperTests.m; sourceTree = "<group>"; };
+		15DE988E26D5493C00A12767 /* ConsentManagerWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsentManagerWrapperTests.m; sourceTree = "<group>"; };
+		15DE988F26D5493C00A12767 /* TealiumWrapperCocoapodsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TealiumWrapperCocoapodsTests.m; sourceTree = "<group>"; };
+		15DE989826D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackingAndRemoteCommandAcceptanceTests.m; sourceTree = "<group>"; };
+		15DEE2582784604E0011B7B7 /* TealiumWrapperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TealiumWrapperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15DEE25A2784604E0011B7B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15DEE25E2784604E0011B7B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15DEE2612784604E0011B7B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15DEE2632784604F0011B7B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15DEE2662784604F0011B7B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15DEE2682784604F0011B7B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8632D7FA7617211BDE9533 /* Pods-TealiumWrapperSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TealiumWrapperSample.release.xcconfig"; path = "Target Support Files/Pods-TealiumWrapperSample/Pods-TealiumWrapperSample.release.xcconfig"; sourceTree = "<group>"; };
+		57A7BEB7C4AA88A5DF6AC995 /* Pods-TealiumWrapperCocoapods_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TealiumWrapperCocoapods_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TealiumWrapperCocoapods_Tests/Pods-TealiumWrapperCocoapods_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* TealiumWrapperCocoapods_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TealiumWrapperCocoapods_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766672B67B0C12E711D1A44F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B3B73CFA5B31C7E3185D5CD6 /* Pods-TealiumWrapperSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TealiumWrapperSample.debug.xcconfig"; path = "Target Support Files/Pods-TealiumWrapperSample/Pods-TealiumWrapperSample.debug.xcconfig"; sourceTree = "<group>"; };
+		BF30722B60D1B4B8DECC449F /* TealiumWrapperCocoapods.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TealiumWrapperCocoapods.podspec; path = ../TealiumWrapperCocoapods.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D725AB14BF89B876AF224321 /* Pods_TealiumWrapperSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TealiumWrapperSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBF9ADBBACFAC0C1646F4EA /* Pods_TealiumWrapperCocoapods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TealiumWrapperCocoapods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA36C7E90C00367E26407D7 /* Pods-TealiumWrapperCocoapods_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TealiumWrapperCocoapods_Tests.release.xcconfig"; path = "Target Support Files/Pods-TealiumWrapperCocoapods_Tests/Pods-TealiumWrapperCocoapods_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15DEE2552784604E0011B7B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DECA4FDCEA52035E3369BD /* Pods_TealiumWrapperSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46863408B2288ACC145602C /* Pods_TealiumWrapperCocoapods_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00F511658996A65F68C27A38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D725AB14BF89B876AF224321 /* Pods_TealiumWrapperSample.framework */,
+				EBBF9ADBBACFAC0C1646F4EA /* Pods_TealiumWrapperCocoapods_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15DEE2592784604E0011B7B7 /* TealiumWrapperSample */ = {
+			isa = PBXGroup;
+			children = (
+				15DEE25A2784604E0011B7B7 /* AppDelegate.swift */,
+				15DEE25E2784604E0011B7B7 /* ViewController.swift */,
+				15DEE2602784604E0011B7B7 /* Main.storyboard */,
+				15DEE2632784604F0011B7B7 /* Assets.xcassets */,
+				15DEE2652784604F0011B7B7 /* LaunchScreen.storyboard */,
+				15DEE2682784604F0011B7B7 /* Info.plist */,
+			);
+			path = TealiumWrapperSample;
+			sourceTree = "<group>";
+		};
+		23C52BA815BC7F293B434EE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3B73CFA5B31C7E3185D5CD6 /* Pods-TealiumWrapperSample.debug.xcconfig */,
+				4D8632D7FA7617211BDE9533 /* Pods-TealiumWrapperSample.release.xcconfig */,
+				57A7BEB7C4AA88A5DF6AC995 /* Pods-TealiumWrapperCocoapods_Tests.debug.xcconfig */,
+				EFA36C7E90C00367E26407D7 /* Pods-TealiumWrapperCocoapods_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				15DEE2592784604E0011B7B7 /* TealiumWrapperSample */,
+				607FACD11AFB9204008FA782 /* Products */,
+				23C52BA815BC7F293B434EE4 /* Pods */,
+				00F511658996A65F68C27A38 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACE51AFB9204008FA782 /* TealiumWrapperCocoapods_Tests.xctest */,
+				15DEE2582784604E0011B7B7 /* TealiumWrapperSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACE81AFB9204008FA782 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				15A4960026D6383F00193413 /* stubs */,
+				15DE988E26D5493C00A12767 /* ConsentManagerWrapperTests.m */,
+				15DE988926D5493B00A12767 /* ConsentMockDiskStorage.swift */,
+				15DE988A26D5493B00A12767 /* TestHelper.swift */,
+				15DE988B26D5493B00A12767 /* RemoteCommandWrapperTests.m */,
+				15DE988C26D5493B00A12767 /* TealiumConfigWrapperTests.m */,
+				15DE988F26D5493C00A12767 /* TealiumWrapperCocoapodsTests.m */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+				15DE988826D5493A00A12767 /* TealiumWrapperCocoapods_Tests-Bridging-Header.h */,
+				15DE989826D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m */,
+				15A4960226D638C300193413 /* VisitorProfileTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEA1AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				BF30722B60D1B4B8DECC449F /* TealiumWrapperCocoapods.podspec */,
+				766672B67B0C12E711D1A44F /* README.md */,
+				130EFF9C33569C30E79144F0 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15DEE2572784604E0011B7B7 /* TealiumWrapperSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15DEE26B2784604F0011B7B7 /* Build configuration list for PBXNativeTarget "TealiumWrapperSample" */;
+			buildPhases = (
+				79FB32CB54C4F156B9AC8291 /* [CP] Check Pods Manifest.lock */,
+				15DEE2542784604E0011B7B7 /* Sources */,
+				15DEE2552784604E0011B7B7 /* Frameworks */,
+				15DEE2562784604E0011B7B7 /* Resources */,
+				5399E27E53E9850B25433B67 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TealiumWrapperSample;
+			productName = TealiumWrapperSample;
+			productReference = 15DEE2582784604E0011B7B7 /* TealiumWrapperSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		607FACE41AFB9204008FA782 /* TealiumWrapperCocoapods_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TealiumWrapperCocoapods_Tests" */;
+			buildPhases = (
+				08EFCB1E8272974CCF253876 /* [CP] Check Pods Manifest.lock */,
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
+				9248A97641F41A348ED0CB47 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TealiumWrapperCocoapods_Tests;
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* TealiumWrapperCocoapods_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					15DEE2572784604E0011B7B7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						DevelopmentTeam = XC939GDC9P;
+						ProvisioningStyle = Automatic;
+					};
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XC939GDC9P;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "TealiumWrapperCocoapods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACE41AFB9204008FA782 /* TealiumWrapperCocoapods_Tests */,
+				15DEE2572784604E0011B7B7 /* TealiumWrapperSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15DEE2562784604E0011B7B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DEE2672784604F0011B7B7 /* LaunchScreen.storyboard in Resources */,
+				15DEE2642784604F0011B7B7 /* Assets.xcassets in Resources */,
+				15DEE2622784604E0011B7B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A4960126D6383F00193413 /* stubs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08EFCB1E8272974CCF253876 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TealiumWrapperCocoapods_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5399E27E53E9850B25433B67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TealiumWrapperSample/Pods-TealiumWrapperSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TealiumWrapperCocoapods/TealiumWrapperCocoapods.framework",
+				"${BUILT_PRODUCTS_DIR}/tealium-swift/TealiumSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TealiumWrapperCocoapods.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TealiumSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TealiumWrapperSample/Pods-TealiumWrapperSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79FB32CB54C4F156B9AC8291 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TealiumWrapperSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9248A97641F41A348ED0CB47 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TealiumWrapperCocoapods_Tests/Pods-TealiumWrapperCocoapods_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TealiumWrapperCocoapods/TealiumWrapperCocoapods.framework",
+				"${BUILT_PRODUCTS_DIR}/tealium-swift/TealiumSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TealiumWrapperCocoapods.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TealiumSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TealiumWrapperCocoapods_Tests/Pods-TealiumWrapperCocoapods_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15DEE2542784604E0011B7B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DEE25F2784604E0011B7B7 /* ViewController.swift in Sources */,
+				15DEE25B2784604E0011B7B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE11AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DE989626D5493C00A12767 /* TealiumWrapperCocoapodsTests.m in Sources */,
+				15DE989326D5493C00A12767 /* RemoteCommandWrapperTests.m in Sources */,
+				15DE989926D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m in Sources */,
+				15DE989426D5493C00A12767 /* TealiumConfigWrapperTests.m in Sources */,
+				15A4960326D638C300193413 /* VisitorProfileTests.m in Sources */,
+				15DE989126D5493C00A12767 /* ConsentMockDiskStorage.swift in Sources */,
+				15DE989526D5493C00A12767 /* ConsentManagerWrapperTests.m in Sources */,
+				15DE989226D5493C00A12767 /* TestHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15DEE2602784604E0011B7B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15DEE2612784604E0011B7B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15DEE2652784604F0011B7B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15DEE2662784604F0011B7B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15DEE2692784604F0011B7B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B73CFA5B31C7E3185D5CD6 /* Pods-TealiumWrapperSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XC939GDC9P;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TealiumWrapperSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tealium.TealiumWrapperSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15DEE26A2784604F0011B7B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8632D7FA7617211BDE9533 /* Pods-TealiumWrapperSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XC939GDC9P;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TealiumWrapperSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tealium.TealiumWrapperSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF31AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A7BEB7C4AA88A5DF6AC995 /* Pods-TealiumWrapperCocoapods_Tests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = XC939GDC9P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/TealiumWrapperCocoapods_Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		607FACF41AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA36C7E90C00367E26407D7 /* Pods-TealiumWrapperCocoapods_Tests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = XC939GDC9P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/TealiumWrapperCocoapods_Tests-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15DEE26B2784604F0011B7B7 /* Build configuration list for PBXNativeTarget "TealiumWrapperSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DEE2692784604F0011B7B7 /* Debug */,
+				15DEE26A2784604F0011B7B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "TealiumWrapperCocoapods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TealiumWrapperCocoapods_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Tealium.Xamarin</id>
+    <version>2.0.0</version>
+    <authors>tealium</authors>
+    <owners>tealium</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>logo_64.png</icon>
+    <projectUrl>https://github.com/Tealium/tealium-xamarin</projectUrl>
+    <iconUrl>https://github.com/Tealium/tealium-xamarin/raw/master/logo_64.png</iconUrl>
+    <description>The Tealium Xamarin integration brings support for Tealium's Native iOS and Android SDKs to the Xamarin platform. This package provides a single cross-platform API, enabling you to develop with Tealium once for both iOS and Android platforms. The Tealium Native SDKs for iOS and Android are embedded along with the lifecycle libraries.</description>
+    <releaseNotes>The embedded Tealium SDK versions are: iOS Swift v2.6.0 and Android Kotlin v1.3.0.</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+    <tags>Tealium iOS Android</tags>
+    <dependencies>
+      <group targetFramework="MonoAndroid0.0">
+        <dependency id="Xamarin.Kotlin.StdLib" version="[1.5.0, 2.0.0)" />
+        <dependency id="Xamarin.KotlinX.Coroutines.Core" version="[1.5.0, 2.0.0)" />
+        <dependency id="Xamarin.KotlinX.Coroutines.Android" version="[1.5.0, 2.0.0)" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Tealium.Xamarin</id>
+    <version>2.0.0</version>
+    <authors>tealium</authors>
+    <owners>tealium</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/Tealium/tealium-xamarin</projectUrl>
+    <icon>logo_64.png</icon>
+    <iconUrl>https://github.com/Tealium/tealium-xamarin/raw/master/logo_64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Tealium Xamarin integration brings support for Tealium's Native iOS and Android SDKs to the Xamarin platform. This package provides a single cross-platform API, enabling you to develop with Tealium once for both iOS and Android platforms. The Tealium Native SDKs for iOS and Android are embedded along with the lifecycle libraries.</description>
+    <releaseNotes>The embedded Tealium SDK versions are: iOS Swift v2.6.0 and Android Kotlin v1.3.0.</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+    <tags>Tealium iOS Android</tags>
+    <!-- Insert within the <metadata> element -->
+    <dependencies>
+        <group targetFramework="MonoAndroid">
+            <dependency id="Xamarin.Kotlin.StdLib" version="[1.5,2.0)" />
+            <dependency id="Xamarin.KotlinX.Coroutines.Core" version="[1.5,2.0)" />
+            <dependency id="Xamarin.KotlinX.Coroutines.Android" version="[1.5,2.0)" />
+        </group>
+        <!-- <group targetFramework="Xamarin.iOS">
+            <dependency id="Tealium.Xamarin.Platform.iOS" version="5.4.4.1" />
+        </group> -->
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Cross-platform reference assemblies -->
+    <file src="../../APIs/Tealium.Common/bin/Release/Tealium.Common.dll" target="lib/netstandard2.0/Tealium.Common.dll" />
+
+    <!-- Platform-Specific Common Libraries  -->
+    <file src="../../APIs/Tealium.Common/bin/Release/Tealium.Common.dll" target="lib/Xamarin.iOS10/Tealium.Common.dll" />
+    <file src="../../APIs/Tealium.Common/bin/Release/Tealium.Common.dll" target="lib/MonoAndroid50/Tealium.Common.dll" />
+
+    <!-- Platform-Specific Abstraction Libraries  -->
+    <file src="../../APIs/Tealium.iOS/bin/Release/Tealium.iOS.dll" target="lib/Xamarin.iOS10/Tealium.iOS.dll" />
+    <file src="../../APIs/Tealium.Droid/bin/Release/Tealium.Droid.dll" target="lib/MonoAndroid50/Tealium.Droid.dll" />
+    
+    <!-- Platform-Specific Bindings Libraries  -->
+    <!-- Main SDKs -->
+    <file src="../../APIs/Tealium.Platform.iOS/bin/Release/Tealium.Platform.iOS.dll" target="lib/Xamarin.iOS10/Tealium.Platform.iOS.dll" />
+    <file src="../../APIs/Tealium.Platform.Droid/bin/Release/Tealium.Platform.Droid.dll" target="lib/MonoAndroid50/Tealium.Platform.Droid.dll" />
+    <file src="../../LICENSE.txt" target=""/>
+    <file src="../../logo_64.png" target=""/>
+  </files>
+</package>

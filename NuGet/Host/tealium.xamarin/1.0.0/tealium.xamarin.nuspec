@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Tealium.Xamarin</id>
+    <version>1.0.0</version>
+    <authors>tealium</authors>
+    <owners>tealium</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/Tealium/tealium-xamarin/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/Tealium/tealium-xamarin</projectUrl>
+    <iconUrl>https://github.com/Tealium/tealium-xamarin/raw/master/logo_64.png</iconUrl>
+    <description>Tealium Xamarin integration brings support for Tealium's Nativce iOS and Android SDKs to the Xamarin platform. This package provides a single cross-platform API with which to program against, enabling you to develop with Tealium once for both iOS and Android platforms. Tealium Native SDKs for Android and iOS are embedded along with the lifecycle libraries.</description>
+    <releaseNotes>Initial release of the NuGet package - The embedded Tealium SDK versions are: iOS v5.4.4 and Android v5.5.0.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Tealium iOS Android</tags>
+  </metadata>
+</package>

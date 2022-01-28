@@ -1,0 +1,3 @@
+include ':app'
+include ':bindings'
+rootProject.name = "Xamarin"
