@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Tealium.RemoteCommands.Firebase.Xamarin</id>
+    <version>1.0.0</version>
+    <authors>tealium</authors>
+    <owners>tealium</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/Tealium/tealium-xamarin</projectUrl>
+    <icon>logo_64.png</icon>
+    <iconUrl>https://github.com/Tealium/tealium-xamarin/raw/master/logo_64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Tealium Firebase Xamarin integration brings support for Tealium's Firebase remote command to the Xamarin platform. This package provides a single cross-platform API, enabling you to develop with Tealium once for both iOS and Android platforms.</description>
+    <releaseNotes>First version of Tealium Firebase Xamarin</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+    <tags>Tealium Firebase iOS Android</tags>
+    <!-- Insert within the <metadata> element -->
+    <dependencies>
+        <group targetFramework="MonoAndroid5.0">
+            <dependency id="Xamarin.Firebase.Analytics" version="[120.0.1,121.0)"/>
+            <dependency id="Tealium.Xamarin" version="[2.0.1,3.0)" />
+        </group>
+        <group targetFramework="Xamarin.iOS1.0">
+            <dependency id="Xamarin.Firebase.iOS.Analytics" version="[8.10,9.0)" />
+            <dependency id="Tealium.Xamarin" version="[2.0.1,3.0)" />
+        </group>
+        <group targetFramework=".NETStandard2.0">
+            <dependency id="Tealium.Xamarin" version="[2.0.1,3.0)" />
+        </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- Cross-platform reference assemblies -->
+    <file src="../../Integrations/Firebase/Tealium.RemoteCommands.Firebase.Common/bin/Release/Tealium.RemoteCommands.Firebase.Common.dll" target="lib/netstandard2.0/Tealium.RemoteCommands.Firebase.Common.dll" />
+
+    <!-- Platform-Specific Common Libraries  -->
+    <file src="../../Integrations/Firebase/Tealium.RemoteCommands.Firebase.Common/bin/Release/Tealium.RemoteCommands.Firebase.Common.dll" target="lib/Xamarin.iOS10/Tealium.RemoteCommands.Firebase.Common.dll" />
+    <file src="../../Integrations/Firebase/Tealium.RemoteCommands.Firebase.Common/bin/Release/Tealium.RemoteCommands.Firebase.Common.dll" target="lib/MonoAndroid50/Tealium.RemoteCommands.Firebase.Common.dll" />
+
+    <!-- Platform-Specific Abstraction Libraries  -->
+    <file src="../../Integrations/Firebase/Tealium.RemoteCommands.Firebase.iOS/bin/Release/Tealium.RemoteCommands.Firebase.iOS.dll" target="lib/Xamarin.iOS10/Tealium.RemoteCommands.Firebase.iOS.dll" />
+    <file src="../../Integrations/Firebase/Tealium.RemoteCommands.Firebase.Droid/bin/Release/Tealium.RemoteCommands.Firebase.Droid.dll" target="lib/MonoAndroid50/Tealium.RemoteCommands.Firebase.Droid.dll" />
+
+    <file src="../../LICENSE.txt" target=""/>
+    <file src="../../logo_64.png" target=""/>
+  </files>
+</package>

@@ -24,7 +24,7 @@ namespace Tealium.Tests.iOS
         [Test]
         public void DefaultNameAndVersion()
         {
-            var command = new RemoteCommandIOS("id", null, new RemoteCommandTypeWrapper());
+            var command = new RemoteCommandIOS("id", null, new RemoteCommandTypeWrapper(), null, null);
             Assert.AreEqual(command.Name, "id");
             Assert.NotNull(command.Version);
             var wrapper = new RemoteCommandWrapper("id", null, new RemoteCommandTypeWrapper(), response => { });
@@ -34,7 +34,7 @@ namespace Tealium.Tests.iOS
         [Test]
         public void NameAndVersion()
         {
-            var command = new SomeRemoteCommandIOSSubclass(new RemoteCommandIOS("id", null, new RemoteCommandTypeWrapper()));
+            var command = new SomeRemoteCommandIOSSubclass(new RemoteCommandIOS("id", null, new RemoteCommandTypeWrapper(), null, null));
             Assert.AreEqual(command.Name, "someName");
             Assert.AreEqual(command.Version, "someVersion");
         }

@@ -18,7 +18,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -107,44 +107,44 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.4.2.1" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Xamarin.KotlinX.Coroutines.Android">
-      <Version>1.5.0</Version>
+      <Version>1.6.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.KotlinX.Coroutines.Core">
-      <Version>1.5.0</Version>
+      <Version>1.6.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Kotlin.StdLib.Common">
-      <Version>1.5.10</Version>
+      <Version>1.6.21.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Kotlin.StdLib">
-      <Version>1.5.10</Version>
+      <Version>1.6.21.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Sdk">
-      <Version>118.0.3</Version>
+      <Version>120.1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Sdk.Api">
-      <Version>118.0.3</Version>
+      <Version>120.1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Api">
-      <Version>118.0.3</Version>
+      <Version>120.1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base">
-      <Version>118.0.3</Version>
+      <Version>120.1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
-      <Version>117.2.1</Version>
+      <Version>118.0.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Analytics">
-      <Version>118.0.3</Version>
+      <Version>120.0.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Common">
-      <Version>119.5.0</Version>
+      <Version>120.0.0.6</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Iid">
-      <Version>119.0.1</Version>
+      <Version>121.1.0.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -160,14 +160,16 @@
       <Project>{18E57B5C-52CD-439A-ACF8-9ABBB2110037}</Project>
       <Name>Tealium.Platform.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Android\Tealium.RemoteCommands.Firebase.Android.csproj">
+    <ProjectReference Include="..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Droid\Tealium.RemoteCommands.Firebase.Droid.csproj">
       <Project>{81FB4FA4-13EE-47D5-9290-E4A00FC2F7D5}</Project>
-      <Name>Tealium.RemoteCommands.Firebase.Android</Name>
+      <Name>Tealium.RemoteCommands.Firebase.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Common\Tealium.RemoteCommands.Firebase.Common.csproj">
+      <Name>Tealium.RemoteCommands.Firebase.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\Tealium.Integration.Tests.Common\Tealium.Integration.Tests.Common.projitems" Label="Shared" Condition="Exists('..\Tealium.Integration.Tests.Common\Tealium.Integration.Tests.Common.projitems')" />
   <Import Project="..\Tealium.Tests.Common\Tealium.Tests.Common.projitems" Label="Shared" Condition="Exists('..\Tealium.Tests.Common\Tealium.Tests.Common.projitems')" />
-  <Import Project="..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Shared\Tealium.RemoteCommands.Firebase.Shared.projitems" Label="Shared" Condition="Exists('..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Shared\Tealium.RemoteCommands.Firebase.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

@@ -71,7 +71,7 @@ namespace Tealium.RemoteCommands.Firebase
 
             string[] commandArray;
             // split the commands into an array
-            commandArray = command.Split(",");
+            commandArray = command.Split(',');
 
             for (int j = 0, commandlen = commandArray.Length; j < commandlen; j++)
             {

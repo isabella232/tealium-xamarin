@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Tealium.RemoteCommands.Firebase
 {
-    static class FirebaseConstants
+    public static class FirebaseConstants
     {
         public static readonly string KeySessionTimeout = "firebase_session_timeout_seconds";
         public static readonly string KeyAnalyticsEnabled = "firebase_analytics_enabled";
