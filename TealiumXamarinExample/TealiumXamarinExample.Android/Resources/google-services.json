@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "531982718018",
+    "project_id": "tealiumfirebaseexample",
+    "storage_bucket": "tealiumfirebaseexample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531982718018:android:ef4b19a3d932af386089db",
+        "android_client_info": {
+          "package_name": "com.tealium.tealiumxamarinexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531982718018-pdm3oih0cunor1a9romn1avade94j4ib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeiTx6jmBdNUDPrnU7PllNVfNJg3Mt1ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531982718018-pdm3oih0cunor1a9romn1avade94j4ib.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "531982718018-l4mmncqb6iegbldqc5snunkr4tnuso3i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tealium.TealiumFirebaseExample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

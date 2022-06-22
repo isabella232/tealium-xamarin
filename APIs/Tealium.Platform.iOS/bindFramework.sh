@@ -1,0 +1,1 @@
+sharpie bind --sdk=iphoneos15.4 --output="XamarinApiDef" --namespace="Tealium.Platform.iOS" --scope="Release-fat/TealiumWrapperCocoapods.framework/Headers/" "Release-fat/TealiumWrapperCocoapods.framework/Headers/TealiumWrapperCocoapods-Swift.h"

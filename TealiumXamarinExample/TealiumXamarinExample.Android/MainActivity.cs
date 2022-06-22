@@ -7,6 +7,7 @@ using Android.OS;
 
 using Tealium;
 using Tealium.Droid;
+using Tealium.RemoteCommands.Firebase.Droid;
 
 namespace TealiumXamarinExample.Droid
 {
@@ -23,6 +24,10 @@ namespace TealiumXamarinExample.Droid
 
             // We create Tealium instance here so that application lifecycle can start right away
             Teal.Helper.SetInstanceManager(new TealiumInstanceManager(new TealiumInstanceFactoryDroid(this.Application)));
+
+            var command = new FirebaseRemoteCommandDroid(this.Application, "firebase.json", null);
+            Console.WriteLine(command.Name);
+            Teal.Helper.RemoteCommands.Add(command);
             Teal.Helper.Init();
 
             LoadApplication(new App());

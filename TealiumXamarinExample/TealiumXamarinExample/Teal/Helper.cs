@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using Tealium;
 
 namespace TealiumXamarinExample.Teal
@@ -27,7 +28,7 @@ namespace TealiumXamarinExample.Teal
                                                          TealiumConstants.PROFILE_NAME,
                                                          TealiumConstants.ENVIRONMENT,
                                                          new List<Dispatchers> {
-                                                             Dispatchers.Collect, Dispatchers.RemoteCommands, Dispatchers.TagManagement
+                                                             Dispatchers.Collect, Dispatchers.RemoteCommands//, Dispatchers.TagManagement
                                                          },
                                                          new List<Collectors> {
                                                              Collectors.LifeCycle, Collectors.AppData
@@ -36,7 +37,7 @@ namespace TealiumXamarinExample.Teal
                                                          consentPolicy: ConsentManager.ConsentPolicy.CCPA,
                                                          visitorServiceEnabled: true
                                                          );
-
+            config.LogLevel = LogLevel.Dev;
             config.Listeners.Add(new TealiumEventListeners());
 
             // Optional - DispatchValidator examples
@@ -76,6 +77,8 @@ namespace TealiumXamarinExample.Teal
             get => InstanceManager.GetExistingInstance(TealiumConstants.ACCOUNT_NAME, TealiumConstants.PROFILE_NAME, TealiumConstants.ENVIRONMENT);
         }
 
+        public static List<IRemoteCommand> RemoteCommands = new List<IRemoteCommand>();
+
         static List<IRemoteCommand> SetupRemoteCommands()
         {
             var command = new DelegateRemoteCommand(TealiumConstants.REMOTE_COMMAND_ID, "Test command " + TealiumConstants.REMOTE_COMMAND_ID)
@@ -86,8 +89,10 @@ namespace TealiumXamarinExample.Teal
                     System.Diagnostics.Debug.WriteLine($"Command Payload: {resp.Payload}");
                 }
             };
+            var list = new List<IRemoteCommand>(RemoteCommands);
+            list.Add(command);
 
-            return new List<IRemoteCommand>() { command };
+            return list;
         }
     }
 

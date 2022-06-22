@@ -123,6 +123,11 @@ namespace Tealium.Platform.iOS
 	[DisableDefaultCtor]
 	interface RemoteCommandResponseWrapper
 	{
+		// -(instancetype _Nonnull)initWithPayload:(NSDictionary<NSString *,id> * _Nonnull)payload __attribute__((objc_designated_initializer));
+		[Export ("initWithPayload:")]
+		[DesignatedInitializer]
+		IntPtr Constructor (NSDictionary<NSString, NSObject> payload);
+
 		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nullable payload;
 		[NullAllowed, Export ("payload", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSObject> Payload { get; set; }
@@ -152,6 +157,14 @@ namespace Tealium.Platform.iOS
 		[Export ("typeString")]
 		string TypeString { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable url;
+		[NullAllowed, Export ("url")]
+		string Url { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable path;
+		[NullAllowed, Export ("path")]
+		string Path { get; }
+
 		// -(instancetype _Nonnull)initWithUrl:(NSString * _Nonnull)url __attribute__((objc_designated_initializer));
 		[Export ("initWithUrl:")]
 		[DesignatedInitializer]
@@ -168,6 +181,10 @@ namespace Tealium.Platform.iOS
 	[DisableDefaultCtor]
 	interface RemoteCommandWrapper
 	{
+		// @property (readonly, nonatomic, strong) RemoteCommandTypeWrapper * _Nonnull type;
+		[Export ("type", ArgumentSemantic.Strong)]
+		RemoteCommandTypeWrapper Type { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull commandId;
 		[Export ("commandId")]
 		string CommandId { get; }
@@ -176,14 +193,26 @@ namespace Tealium.Platform.iOS
 		[NullAllowed, Export ("commandDescription")]
 		string CommandDescription { get; set; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable version;
+		[NullAllowed, Export ("version")]
+		string Version { get; }
+
 		// @property (copy, nonatomic) void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull) completion;
 		[Export ("completion", ArgumentSemantic.Copy)]
 		Action<RemoteCommandResponseWrapper> Completion { get; set; }
 
-		// -(instancetype _Nonnull)initWithCommandId:(NSString * _Nonnull)commandId description:(NSString * _Nullable)description type:(RemoteCommandTypeWrapper * _Nonnull)type completion:(void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull))completion __attribute__((objc_designated_initializer));
+		// -(instancetype _Nonnull)initWithCommandId:(NSString * _Nonnull)commandId description:(NSString * _Nullable)description type:(RemoteCommandTypeWrapper * _Nonnull)type completion:(void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull))completion;
 		[Export ("initWithCommandId:description:type:completion:")]
-		[DesignatedInitializer]
 		IntPtr Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, Action<RemoteCommandResponseWrapper> completion);
+
+		// -(instancetype _Nonnull)initWithCommandId:(NSString * _Nonnull)commandId description:(NSString * _Nullable)description type:(RemoteCommandTypeWrapper * _Nonnull)type name:(NSString * _Nullable)name version:(NSString * _Nullable)version completion:(void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull))completion __attribute__((objc_designated_initializer));
+		[Export ("initWithCommandId:description:type:name:version:completion:")]
+		[DesignatedInitializer]
+		IntPtr Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, [NullAllowed] string name, [NullAllowed] string version, Action<RemoteCommandResponseWrapper> completion);
 	}
 
 	// @interface TealiumConfigWrapper : NSObject

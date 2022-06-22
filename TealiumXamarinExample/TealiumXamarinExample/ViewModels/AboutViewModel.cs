@@ -15,9 +15,19 @@ namespace TealiumXamarinExample.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            TrackEventCommand = new Command(() =>
+
+            TrackEventCommand = new Command(() => Teal.Helper.DefaultInstance.Track(new TealiumEvent("Button Click")));
+            TrackEcommercePurchaseCommand = new Command(() =>
             {
-                Teal.Helper.DefaultInstance.Track(new TealiumEvent("Button Click"));
+                Teal.Helper.DefaultInstance.Track(new TealiumEvent("ecommerce_purchase", new Dictionary<string, object>{
+                    { "order_id", 679000 },
+                    { "event_title", "event_purchase" },
+                    { "product_name", new string[]{"some_name", "2" } },
+                    { "product_id", new string[]{"some_id", "2" } },
+                    { "product_unit_price", new long[] {20, 10} },
+                    { "product_quantity", new long[] {3, 4 } },
+                    { "currency_code", "USD" }
+                }));
             });
 
             TrackViewCommand = new Command(() =>
@@ -81,6 +91,7 @@ namespace TealiumXamarinExample.ViewModels
         }
 
         public ICommand TrackEventCommand { get; }
+        public ICommand TrackEcommercePurchaseCommand { get; }
         public ICommand TrackViewCommand { get; }
         public ICommand AddToDataLayerCommand { get; }
         public ICommand GetFromDataLayerCommand { get; }

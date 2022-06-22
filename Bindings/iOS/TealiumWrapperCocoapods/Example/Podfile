@@ -16,7 +16,7 @@ target 'TealiumWrapperCocoapods_Tests' do
   use_frameworks!
 
   pod 'TealiumWrapperCocoapods', :path => '../'
-
+  
 end
 
 post_install do |installer|

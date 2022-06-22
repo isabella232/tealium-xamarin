@@ -32,5 +32,15 @@ namespace Tealium
         /// </summary>
         /// <param name="response">Response object containing all necessary data to handle the command.</param>
         void HandleResponse(IRemoteCommandResponse response);
+
+        /// <summary>
+        /// Remote command name used for tracking purposes.
+        /// </summary>
+        string Name { get;  }
+
+        /// <summary>
+        /// Remote command version used for tracking purposes.
+        /// </summary>
+        string Version { get; }
     }
 }

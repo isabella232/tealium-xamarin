@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>TealiumXamarinExample</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.tealium.TealiumXamarinExample</string>
+	<string>com.tealium.TealiumFirebaseExample</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>

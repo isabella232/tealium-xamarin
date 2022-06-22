@@ -49,6 +49,10 @@
                         Command="{Binding TrackViewCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                <Button Margin="0,10,0,0" Text="Track Ecommerce Purchase"
+                        Command="{Binding TrackEcommercePurchaseCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
                 <Button Margin="0,10,0,0" Text="Add To Data Layer"
                         Command="{Binding AddToDataLayerCommand}"
                         BackgroundColor="{StaticResource Primary}"

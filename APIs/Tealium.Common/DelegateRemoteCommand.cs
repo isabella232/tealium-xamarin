@@ -10,6 +10,9 @@ namespace Tealium
         private readonly string path;
         private readonly string url;
 
+        public string Name { get; }
+        public string Version { get; }
+
         public DelegateRemoteCommand(string commandId, string description, string path = null, string url = null)
         {
             CommandId = commandId ?? throw new ArgumentNullException(nameof(commandId));

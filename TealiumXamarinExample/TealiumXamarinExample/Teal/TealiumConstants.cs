@@ -8,7 +8,7 @@ namespace TealiumXamarinExample.Teal
     public static class TealiumConstants
     {
         public static readonly string ACCOUNT_NAME = "tealiummobile";
-        public static readonly string PROFILE_NAME = "demo";
+        public static readonly string PROFILE_NAME = "firebase-tag";
 #if DEBUG
         public static readonly Tealium.Environment ENVIRONMENT = Tealium.Environment.Dev;
 #else

@@ -115,6 +115,7 @@
     <Compile Include="DispatchValidatorTests.cs" />
     <Compile Include="VisitorProfileTests.cs" />
     <Compile Include="CommonTests\TealiumInstanceListenersTestsIOS.cs" />
+    <Compile Include="RemoteCommandIOSTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\APIs\Tealium.Common\Tealium.Common.csproj">

@@ -13,7 +13,7 @@ namespace Tealium.Droid
         readonly IRemoteCommand command;
 
         public RemoteCommandDroid(IRemoteCommand command)
-            : base(command.CommandId, command.Description)
+            : base(command.CommandId, command.Description, command.Version)
         {
             this.command = command ?? throw new ArgumentNullException(nameof(command));
         }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15A4960126D6383F00193413 /* stubs in Resources */ = {isa = PBXBuildFile; fileRef = 15A4960026D6383F00193413 /* stubs */; };
 		15A4960326D638C300193413 /* VisitorProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A4960226D638C300193413 /* VisitorProfileTests.m */; };
+		15D7E4DA2817FFA5008E8DA6 /* NameAndVersionRemoteCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D7E4D92817FFA5008E8DA6 /* NameAndVersionRemoteCommandTests.swift */; };
 		15DE989126D5493C00A12767 /* ConsentMockDiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988926D5493B00A12767 /* ConsentMockDiskStorage.swift */; };
 		15DE989226D5493C00A12767 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988A26D5493B00A12767 /* TestHelper.swift */; };
 		15DE989326D5493C00A12767 /* RemoteCommandWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE988B26D5493B00A12767 /* RemoteCommandWrapperTests.m */; };
@@ -29,6 +30,7 @@
 		130EFF9C33569C30E79144F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		15A4960026D6383F00193413 /* stubs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stubs; sourceTree = "<group>"; };
 		15A4960226D638C300193413 /* VisitorProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisitorProfileTests.m; sourceTree = "<group>"; };
+		15D7E4D92817FFA5008E8DA6 /* NameAndVersionRemoteCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndVersionRemoteCommandTests.swift; sourceTree = "<group>"; };
 		15DE988826D5493A00A12767 /* TealiumWrapperCocoapods_Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TealiumWrapperCocoapods_Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		15DE988926D5493B00A12767 /* ConsentMockDiskStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentMockDiskStorage.swift; sourceTree = "<group>"; };
 		15DE988A26D5493B00A12767 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				15DE988826D5493A00A12767 /* TealiumWrapperCocoapods_Tests-Bridging-Header.h */,
 				15DE989826D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m */,
 				15A4960226D638C300193413 /* VisitorProfileTests.m */,
+				15D7E4D92817FFA5008E8DA6 /* NameAndVersionRemoteCommandTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				15DE989326D5493C00A12767 /* RemoteCommandWrapperTests.m in Sources */,
 				15DE989926D54EBE00A12767 /* TrackingAndRemoteCommandAcceptanceTests.m in Sources */,
 				15DE989426D5493C00A12767 /* TealiumConfigWrapperTests.m in Sources */,
+				15D7E4DA2817FFA5008E8DA6 /* NameAndVersionRemoteCommandTests.swift in Sources */,
 				15A4960326D638C300193413 /* VisitorProfileTests.m in Sources */,
 				15DE989126D5493C00A12767 /* ConsentMockDiskStorage.swift in Sources */,
 				15DE989526D5493C00A12767 /* ConsentManagerWrapperTests.m in Sources */,

@@ -40,6 +40,10 @@ namespace Tealium.Tests.Common
 
         public string Url => null;
 
+        string IRemoteCommand.Name => "xamarin-testCommand";
+
+        string IRemoteCommand.Version => null;
+
         public void HandleResponse(IRemoteCommandResponse response)
         {
             HandleResponseCalled = true;
