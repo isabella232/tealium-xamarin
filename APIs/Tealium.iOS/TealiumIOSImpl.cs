@@ -142,17 +142,18 @@ namespace Tealium.iOS
             {
                 return;
             }
-            string name;
+            NSDictionary<NSString, NSObject> data = NSDictionaryConverter.ConvertBack<NSObject>(dispatch.DataLayer);
             if (dispatch.Type == "view")
             {
-                name = ((TealiumView)dispatch).ViewName;
+                nativeTealium.TrackViewWithTitle(((TealiumView)dispatch).ViewName, data);
             }
             else
             {
-                name = ((TealiumEvent)dispatch).EventName;
+                nativeTealium.TrackWithTitle(((TealiumEvent)dispatch).EventName, data);
             }
+            
             // TODO: we want to convert bools to string (!)
-            nativeTealium.TrackViewWithTitle(name, NSDictionaryConverter.ConvertBack<NSObject>(dispatch.DataLayer));
+            
         }
 
         public string GetVisitorId()
