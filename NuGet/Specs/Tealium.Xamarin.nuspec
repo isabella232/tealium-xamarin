@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Tealium.Xamarin</id>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <authors>tealium</authors>
     <owners>tealium</owners>
     <license type="file">LICENSE.txt</license>
