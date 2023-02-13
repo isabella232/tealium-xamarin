@@ -8,7 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
 @objc public enum TealiumLogLevelWrapper: Int {
     
     case info = 0

@@ -68,5 +68,31 @@ namespace Tealium.Tests.Droid.CommonTests
             Assert.DoesNotThrow(() => tealium.RemoveVisitorServiceListener(specificKey));
             Assert.Throws(typeof(InvalidCastException), () => tealium.RemoveConsentExpiryListener(specificKey));
         }
+
+        [Test]
+        public void TestSpecificVisitorIdListener()
+        {
+            TealiumIOSImpl tealIOS = (TealiumIOSImpl)tealium;
+
+            var specificKey = tealIOS.AddVisitorIdListener((v) =>
+            {
+
+            });
+            Assert.DoesNotThrow(() => tealIOS.RemoveVisitorIdListener(specificKey));
+            Assert.Throws(typeof(InvalidCastException), () => tealIOS.RemoveConsentExpiryListener((CollectionSpecificKey<Action>)(object)specificKey));
+        }
+
+        [Test]
+        public void TestGenericVisitorIdListener()
+        {
+            TealiumIOSImpl tealIOS = (TealiumIOSImpl)tealium;
+
+            var specificKey = tealIOS.AddVisitorIdListener((v) =>
+            {
+
+            });
+            Assert.DoesNotThrow(() => tealium.RemoveVisitorIdListener(specificKey));
+            Assert.Throws(typeof(InvalidCastException), () => tealium.RemoveConsentExpiryListener(specificKey));
+        }
     }
 }

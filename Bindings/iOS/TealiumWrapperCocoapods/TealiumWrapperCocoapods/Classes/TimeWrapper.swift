@@ -8,7 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
 @objc public enum TimeUnitWrapper: Int {
     case minutes
     case hours

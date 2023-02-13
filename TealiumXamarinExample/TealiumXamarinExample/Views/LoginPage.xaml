@@ -7,8 +7,18 @@
              x:Class="TealiumXamarinExample.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="CenterAndExpand">
+            <StackLayout Padding="0,10,0,100" Orientation="Horizontal" VerticalOptions="StartAndExpand">
+                <Label Text="Current VisitorId:" FontSize="Small" />
+                <Label Text="{Binding VisitorId}" FontSize="Small" />
+                </StackLayout>
+            <Label Text="Set Your Email and hit Apply:" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding Email}" Placeholder="Email" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+                <Button VerticalOptions="Center" Text="Apply" Command="{Binding LoginCommand}" Padding="10,0,10,0"/>
+                </StackLayout>
+            <Button VerticalOptions="Center" Text="Clear Stored Visitor IDs" Command="{Binding ClearStoredVisitorIdsCommand}"/>
+            <Button VerticalOptions="Center" Text="Reset Visitor ID" Command="{Binding ResetVisitorIdCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

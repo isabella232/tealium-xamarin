@@ -415,6 +415,39 @@ namespace Tealium.Droid
             }
         }
 
+        readonly object visitorIdListenersSync = new object();
+        readonly KeyedCollection<NativeVisitorIdListener> visitorIdListeners = new KeyedCollection<NativeVisitorIdListener>();
+
+        public CollectionSpecificKey<NativeVisitorIdListener> AddVisitorIdListener(Action<string> callback)
+        {
+            if (disposed)
+            {
+                return null;
+            }
+            CollectionSpecificKey<NativeVisitorIdListener> key;
+            lock (visitorIdListenersSync)
+            {
+                var listener = new NativeVisitorIdListener(callback);
+                key = visitorIdListeners.Add(listener);
+                tealium.Events.Subscribe(listener);
+            }
+            return key;
+        }
+
+        public void RemoveVisitorIdListener(CollectionSpecificKey<NativeVisitorIdListener> key)
+        {
+            if (disposed)
+            {
+                return;
+            }
+            lock (visitorIdListenersSync)
+            {
+                var listener = visitorIdListeners.Get(key);
+                _ = visitorIdListeners.Remove(key);
+                tealium.Events.Unsubscribe(listener);
+            }
+        }
+
         readonly object consentListenersSync = new object();
         readonly KeyedCollection<NativeConsentExpiryListener> consentExpiryListeners = new KeyedCollection<NativeConsentExpiryListener>();
 
@@ -458,6 +491,16 @@ namespace Tealium.Droid
             RemoveVisitorServiceListener((CollectionSpecificKey<NativeVisitorServiceListener>)key);
         }
 
+        AnyCollectionKey ITealium.AddVisitorIdListener(Action<string> callback)
+        {
+            return AddVisitorIdListener(callback);
+        }
+
+        void ITealium.RemoveVisitorIdListener(AnyCollectionKey key)
+        {
+            RemoveVisitorIdListener((CollectionSpecificKey<NativeVisitorIdListener>)key);
+        }
+
         AnyCollectionKey ITealium.AddConsentExpiryListener(Action callback)
         {
             return AddConsentExpiryListener(callback);
@@ -466,6 +509,16 @@ namespace Tealium.Droid
         void ITealium.RemoveConsentExpiryListener(AnyCollectionKey key)
         {
             RemoveConsentExpiryListener((CollectionSpecificKey<NativeConsentExpiryListener>)key);
+        }
+
+        public void ClearStoredVisitorIds()
+        {
+            tealium.ClearStoredVisitorIds();
+        }
+
+        public void ResetVisitorId()
+        {
+            tealium.ResetVisitorId();
         }
 
         #endregion Helper methods

@@ -56,5 +56,17 @@ namespace Tealium.Tests.Common
             Assert.DoesNotThrow(() => tealium.RemoveVisitorServiceListener(key));
             Assert.Throws(typeof(InvalidCastException), () => tealium.RemoveConsentExpiryListener(key));
         }
+
+        [Test]
+        public void TestVisitorIdListeners()
+        {
+            var key = tealium.AddVisitorIdListener((v) =>
+            {
+
+            });
+
+            Assert.DoesNotThrow(() => tealium.RemoveVisitorIdListener(key));
+            Assert.Throws(typeof(InvalidCastException), () => tealium.RemoveConsentExpiryListener(key));
+        }
     }
 }

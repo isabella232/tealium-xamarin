@@ -8,7 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
 @objc public enum CollectorType: Int {
     case appData
     case connectivity

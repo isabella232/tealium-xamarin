@@ -8,7 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
 @objc(RemoteCommandTypeWrapper)
 open class RemoteCommandTypeWrapper: NSObject {
     

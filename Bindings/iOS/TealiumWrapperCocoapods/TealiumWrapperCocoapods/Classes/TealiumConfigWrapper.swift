@@ -575,4 +575,28 @@ public class TealiumConfigWrapper: NSObject {
             config.remoteCommandConfigRefresh = newValue.refreshInterval
         }
     }
+    
+    /// A key used to inspect the data layer for a stitching key to be used to store the current visitorId with.
+    ///
+    /// The current visitorId is stored with this key so if this key changes, we automatically reset it to a new value, and if it comes back to the old value we have a copy and don't have to generate a new one.
+    /// Something like an email adress, or a unique identifier of the current user should be the field to which this key is pointing to.
+    ///
+    /// Note that the key is hashed and not saved in plain text when stored on disk.
+    @objc public var visitorIdentityKey: String? {
+        get {
+            config.visitorIdentityKey
+        }
+        set {
+            config.visitorIdentityKey = newValue
+        }
+    }
+    
+    @objc public var overrideConsentCategoriesKey: String? {
+        get {
+            config.overrideConsentCategoriesKey
+        }
+        set {
+            config.overrideConsentCategoriesKey = newValue
+        }
+    }
 }

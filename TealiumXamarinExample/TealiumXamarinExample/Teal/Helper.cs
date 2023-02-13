@@ -35,7 +35,8 @@ namespace TealiumXamarinExample.Teal
                                                          },
                                                          remoteCommands: commands,
                                                          consentPolicy: ConsentManager.ConsentPolicy.CCPA,
-                                                         visitorServiceEnabled: true
+                                                         visitorServiceEnabled: true,
+                                                         visitorIdentityKey: "email"
                                                          );
             config.LogLevel = LogLevel.Dev;
             config.Listeners.Add(new TealiumEventListeners());
@@ -94,7 +95,7 @@ namespace TealiumXamarinExample.Teal
 
             return list;
         }
-    }
+     }
 
     class TealiumEventListeners : IVisitorUpdatedEventListener, IConsentExpiredEventListener, IDispatchDroppedEventListener, IDispatchQueuedEventListener, ISettingsPublishedEventListener
     {

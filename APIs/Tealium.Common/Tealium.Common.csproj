@@ -61,6 +61,7 @@ Provides a unified C# API that allows for writing fully cross-platform code.</De
     <Compile Include="ConsentManager.cs" />
     <Compile Include="VisitorProfile.cs" />
     <Compile Include="KeyedCollection.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

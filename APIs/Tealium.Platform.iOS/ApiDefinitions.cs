@@ -4,6 +4,10 @@ using ObjCRuntime;
 using UIKit;
 using WebKit;
 
+#if !NET
+using NativeHandle = System.IntPtr;
+#endif
+
 namespace Tealium.Platform.iOS
 {
 	// @interface ConsentManagerWrapper : NSObject
@@ -65,7 +69,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithId:(NSString * _Nonnull)id __attribute__((objc_designated_initializer));
 		[Export ("initWithId:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (string id);
+		NativeHandle Constructor (string id);
 
 		// -(QueueRequestResponse * _Nonnull)shouldQueueWithRequest:(TealiumRequestWrapper * _Nonnull)request __attribute__((warn_unused_result("")));
 		[Export ("shouldQueueWithRequest:")]
@@ -96,7 +100,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithTime:(NSInteger)time unit:(enum TimeUnitWrapper)unit __attribute__((objc_designated_initializer));
 		[Export ("initWithTime:unit:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (nint time, TimeUnitWrapper unit);
+		NativeHandle Constructor (nint time, TimeUnitWrapper unit);
 	}
 
 	// @interface QueueRequestResponse : NSObject
@@ -115,7 +119,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithShouldQueue:(BOOL)shouldQueue data:(NSDictionary<NSString *,id> * _Nullable)data __attribute__((objc_designated_initializer));
 		[Export ("initWithShouldQueue:data:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (bool shouldQueue, [NullAllowed] NSDictionary<NSString, NSObject> data);
+		NativeHandle Constructor (bool shouldQueue, [NullAllowed] NSDictionary<NSString, NSObject> data);
 	}
 
 	// @interface RemoteCommandResponseWrapper : NSObject
@@ -126,7 +130,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithPayload:(NSDictionary<NSString *,id> * _Nonnull)payload __attribute__((objc_designated_initializer));
 		[Export ("initWithPayload:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (NSDictionary<NSString, NSObject> payload);
+		NativeHandle Constructor (NSDictionary<NSString, NSObject> payload);
 
 		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nullable payload;
 		[NullAllowed, Export ("payload", ArgumentSemantic.Copy)]
@@ -168,12 +172,12 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithUrl:(NSString * _Nonnull)url __attribute__((objc_designated_initializer));
 		[Export ("initWithUrl:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (string url);
+		NativeHandle Constructor (string url);
 
 		// -(instancetype _Nonnull)initWithFile:(NSString * _Nonnull)file bundle:(NSBundle * _Nullable)bundle __attribute__((objc_designated_initializer));
 		[Export ("initWithFile:bundle:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (string file, [NullAllowed] NSBundle bundle);
+		NativeHandle Constructor (string file, [NullAllowed] NSBundle bundle);
 	}
 
 	// @interface RemoteCommandWrapper : NSObject
@@ -207,12 +211,12 @@ namespace Tealium.Platform.iOS
 
 		// -(instancetype _Nonnull)initWithCommandId:(NSString * _Nonnull)commandId description:(NSString * _Nullable)description type:(RemoteCommandTypeWrapper * _Nonnull)type completion:(void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull))completion;
 		[Export ("initWithCommandId:description:type:completion:")]
-		IntPtr Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, Action<RemoteCommandResponseWrapper> completion);
+		NativeHandle Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, Action<RemoteCommandResponseWrapper> completion);
 
 		// -(instancetype _Nonnull)initWithCommandId:(NSString * _Nonnull)commandId description:(NSString * _Nullable)description type:(RemoteCommandTypeWrapper * _Nonnull)type name:(NSString * _Nullable)name version:(NSString * _Nullable)version completion:(void (^ _Nonnull)(RemoteCommandResponseWrapper * _Nonnull))completion __attribute__((objc_designated_initializer));
 		[Export ("initWithCommandId:description:type:name:version:completion:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, [NullAllowed] string name, [NullAllowed] string version, Action<RemoteCommandResponseWrapper> completion);
+		NativeHandle Constructor (string commandId, [NullAllowed] string description, RemoteCommandTypeWrapper type, [NullAllowed] string name, [NullAllowed] string version, Action<RemoteCommandResponseWrapper> completion);
 	}
 
 	// @interface TealiumConfigWrapper : NSObject
@@ -223,7 +227,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithAccount:(NSString * _Nonnull)account profile:(NSString * _Nonnull)profile environment:(NSString * _Nonnull)environment dataSource:(NSString * _Nullable)dataSource options:(NSDictionary<NSString *,id> * _Nullable)options __attribute__((objc_designated_initializer));
 		[Export ("initWithAccount:profile:environment:dataSource:options:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (string account, string profile, string environment, [NullAllowed] string dataSource, [NullAllowed] NSDictionary<NSString, NSObject> options);
+		NativeHandle Constructor (string account, string profile, string environment, [NullAllowed] string dataSource, [NullAllowed] NSDictionary<NSString, NSObject> options);
 
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull account;
 		[Export ("account")]
@@ -428,6 +432,14 @@ namespace Tealium.Platform.iOS
 		// @property (nonatomic, strong) TealiumRefreshIntervalWrapper * _Nonnull remoteCommandConfigRefresh;
 		[Export ("remoteCommandConfigRefresh", ArgumentSemantic.Strong)]
 		TealiumRefreshIntervalWrapper RemoteCommandConfigRefresh { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable visitorIdentityKey;
+		[NullAllowed, Export ("visitorIdentityKey")]
+		string VisitorIdentityKey { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable overrideConsentCategoriesKey;
+		[NullAllowed, Export ("overrideConsentCategoriesKey")]
+		string OverrideConsentCategoriesKey { get; set; }
 	}
 
 	// @interface TealiumCurrentVisitProfileWrapper : NSObject
@@ -492,7 +504,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nonnull)initWithAmount:(NSInteger)amount unit:(enum RefreshTimeWrapper)unit __attribute__((objc_designated_initializer));
 		[Export ("initWithAmount:unit:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (nint amount, RefreshTimeWrapper unit);
+		NativeHandle Constructor (nint amount, RefreshTimeWrapper unit);
 	}
 
 	// @interface TealiumRequestWrapper : NSObject
@@ -574,7 +586,7 @@ namespace Tealium.Platform.iOS
 		// -(instancetype _Nullable)initWithJsonData:(NSData * _Nonnull)jsonData error:(NSError * _Nullable * _Nullable)error __attribute__((objc_designated_initializer));
 		[Export ("initWithJsonData:error:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (NSData jsonData, [NullAllowed] out NSError error);
+		NativeHandle Constructor (NSData jsonData, [NullAllowed] out NSError error);
 
 		// @property (readonly, nonatomic) BOOL isEmpty;
 		[Export ("isEmpty")]
@@ -614,10 +626,14 @@ namespace Tealium.Platform.iOS
 		[NullAllowed, Export ("onVisitorProfileUpdate", ArgumentSemantic.Copy)]
 		Action<TealiumVisitorProfileWrapper> OnVisitorProfileUpdate { get; set; }
 
+		// @property (copy, nonatomic) void (^ _Nullable)(NSString * _Nonnull) onVisitorIdUpdate;
+		[NullAllowed, Export ("onVisitorIdUpdate", ArgumentSemantic.Copy)]
+		Action<NSString> OnVisitorIdUpdate { get; set; }
+
 		// -(instancetype _Nonnull)initWithConfig:(TealiumConfigWrapper * _Nonnull)config enableCompletion:(void (^ _Nullable)(BOOL, NSError * _Nullable))enableCompletion __attribute__((objc_designated_initializer));
 		[Export ("initWithConfig:enableCompletion:")]
 		[DesignatedInitializer]
-		IntPtr Constructor (TealiumConfigWrapper config, [NullAllowed] Action<bool, NSError> enableCompletion);
+		NativeHandle Constructor (TealiumConfigWrapper config, [NullAllowed] Action<bool, NSError> enableCompletion);
 
 		// -(void)resetConsentPreferences;
 		[Export ("resetConsentPreferences")]
@@ -663,5 +679,13 @@ namespace Tealium.Platform.iOS
 		// -(void)destroy;
 		[Export ("destroy")]
 		void Destroy ();
+
+		// -(void)resetVisitorId;
+		[Export ("resetVisitorId")]
+		void ResetVisitorId ();
+
+		// -(void)clearStoredVisitorIds;
+		[Export ("clearStoredVisitorIds")]
+		void ClearStoredVisitorIds ();
 	}
 }

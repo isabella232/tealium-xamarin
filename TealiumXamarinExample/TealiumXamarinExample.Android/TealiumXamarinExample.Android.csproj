@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
 <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-<EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -129,6 +128,10 @@
     <ProjectReference Include="..\..\Integrations\Firebase\Tealium.RemoteCommands.Firebase.Droid\Tealium.RemoteCommands.Firebase.Droid.csproj">
       <Project>{81FB4FA4-13EE-47D5-9290-E4A00FC2F7D5}</Project>
       <Name>Tealium.RemoteCommands.Firebase.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APIs\Tealium.Platform.Droid\Tealium.Platform.Droid.csproj">
+      <Project>{18E57B5C-52CD-439A-ACF8-9ABBB2110037}</Project>
+      <Name>Tealium.Platform.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -7,8 +7,6 @@
 
 import TealiumSwift
 
-
-// TODO: handle instance deallocation in some way
 @objc(TealiumWrapper)
 public class TealiumWrapper: NSObject {
     
@@ -64,22 +62,32 @@ public class TealiumWrapper: NSObject {
     
     @objc public var onVisitorProfileUpdate: ((TealiumVisitorProfileWrapper) -> Void)? {
         get {
-            visitorUpdateHandler.onVisitorProfileUpdate
+            eventsHandler.onVisitorProfileUpdate
         }
         set {
-            visitorUpdateHandler.onVisitorProfileUpdate = newValue
+            eventsHandler.onVisitorProfileUpdate = newValue
         }
     }
 
-    let visitorUpdateHandler: VisitorUpdateHandler
+    let eventsHandler: EventsHandler
+    
+    @objc public var onVisitorIdUpdate: ((String) -> Void)? {
+        get {
+            eventsHandler.onVisitorIdUpdate
+        }
+        set {
+            eventsHandler.onVisitorIdUpdate = newValue
+        }
+    }
     
     @objc public init(config: TealiumConfigWrapper, enableCompletion: ((_ success: Bool,_ error: Error?) -> Void)?) {
         self.config = config
-        let handler = VisitorUpdateHandler()
-        self.visitorUpdateHandler = handler
-        config.config.visitorServiceDelegate = handler
+        let eventsHandler = EventsHandler()
+        self.eventsHandler = eventsHandler
+        config.config.visitorServiceDelegate = eventsHandler
         var tealium: Tealium!
         tealium = Tealium(config: config.config) { result in
+            eventsHandler.subscribe(onVisitorId: tealium?.onVisitorId)
             switch result {
                 case .success(let success):
                     enableCompletion?(success, nil)
@@ -150,6 +158,14 @@ public class TealiumWrapper: NSObject {
         tealium.remoteCommands?.removeAll()
     }
     
+    @objc public func resetVisitorId() {
+        tealium.resetVisitorId()
+    }
+
+    @objc public func clearStoredVisitorIds() {
+        tealium.clearStoredVisitorIds()
+    }
+    
     deinit {
         // This is just added to allow for tealium instance to be deallocated
         // Instance manager will be entirely written in the Xamarin project
@@ -158,12 +174,18 @@ public class TealiumWrapper: NSObject {
     
 }
 
-
-class VisitorUpdateHandler: VisitorServiceDelegate {
-    
+class EventsHandler: VisitorServiceDelegate {
+    let bag = TealiumDisposeBag()
+    var onVisitorIdUpdate: ((String) -> Void)?
     var onVisitorProfileUpdate: ((TealiumVisitorProfileWrapper) -> Void)?
     
     func didUpdate(visitorProfile: TealiumVisitorProfile) {
         onVisitorProfileUpdate?(TealiumVisitorProfileWrapper(visitorProfile: visitorProfile))
+    }
+    
+    func subscribe(onVisitorId: TealiumObservable<String>?) {
+        onVisitorId?.subscribe({ [weak self] newId in
+            self?.onVisitorIdUpdate?(newId)
+        }).toDisposeBag(bag)
     }
 }

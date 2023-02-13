@@ -8,8 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
-
 @objc public enum DispatcherType: Int {
     case collect
     case remoteCommands

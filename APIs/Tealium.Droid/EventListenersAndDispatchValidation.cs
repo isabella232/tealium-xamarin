@@ -99,6 +99,27 @@ namespace Tealium.Droid
     }
 
     /// <summary>
+    /// Native visitor id listener implementation.
+    /// </summary>
+    public class NativeVisitorIdListener : Java.Lang.Object, IVisitorIdUpdatedListener
+    {
+        private readonly Action<string> Action;
+
+        public NativeVisitorIdListener(Action<string> action)
+        {
+            Action = action;
+        }
+
+        public void OnVisitorIdUpdated(string visitorId)
+        {
+            if (visitorId != null)
+            {
+                Action.Invoke(visitorId);
+            }
+        }
+    }
+
+    /// <summary>
     /// Native Event Listener implementation that implements all supported
     /// events to support a provided event listener implementing multiple
     /// different events.

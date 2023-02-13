@@ -8,7 +8,6 @@
 import Foundation
 import TealiumSwift
 
-
 @objc(TealiumVisitorProfileWrapper)
 public class TealiumVisitorProfileWrapper: NSObject {
     

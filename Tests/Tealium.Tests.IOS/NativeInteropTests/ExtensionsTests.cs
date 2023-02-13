@@ -40,8 +40,10 @@ namespace Tealium.Tests.iOS.NativeInteropTests
                     new ConsentManager.ConsentExpiry(10, TimeUnit.Days),
                     true,
                     true,
-                    true
-                );
+                    true,
+                    null,
+                    "visitorIdentityKey",
+                    "overrideConsentCategoriesKey");
 
             TealiumConfigWrapper nativeConfig = config.ToNativeConfig();
 
@@ -68,6 +70,8 @@ namespace Tealium.Tests.iOS.NativeInteropTests
             Assert.True(nativeConfig.QrTraceEnabled);
             Assert.AreEqual("overrideLibrarySettingsUrl", nativeConfig.PublishSettingsURL);
             Assert.True(nativeConfig.ShouldUseRemotePublishSettings);
+            Assert.AreEqual("visitorIdentityKey", nativeConfig.VisitorIdentityKey);
+            
 
             // Lifecycle
             Assert.True((bool)nativeConfig.LifecycleAutoTrackingEnabled);
@@ -86,6 +90,7 @@ namespace Tealium.Tests.iOS.NativeInteropTests
             var consentExpiry = nativeConfig.ConsentExpiry;
             Assert.AreEqual(10, consentExpiry.Time);
             Assert.AreEqual(TimeUnitWrapper.Days, consentExpiry.Unit);
+            Assert.AreEqual("overrideConsentCategoriesKey", nativeConfig.OverrideConsentCategoriesKey);
         }
 
         [Test]

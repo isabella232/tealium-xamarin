@@ -38,9 +38,9 @@ namespace Tealium
                         if (teal != null)
                         {
                             var pluginData = new Dictionary<string, object>{
-                            { "plugin_name", "Tealium-Xamarin" },
-                            { "plugin_version", "2.0.0" }
-                        };
+                            { Constants.DataLayerKeys.pluginName, Constants.Values.pluginName },
+                            { Constants.DataLayerKeys.pluginVersion, Constants.Values.pluginVersion }
+                            };
                             teal.AddToDataLayer(pluginData, Expiry.Forever);
                         }
                         if (ready != null)

@@ -80,8 +80,20 @@ namespace Tealium
         /// <summary>
         /// Removes a previously added callback to handle the updates to the Visitor Profile
         /// </summary>
-        /// <param name="callback">Action to execute when the visitor is updated</param>
+        /// <param name="key">The key returned when adding the listener</param>
         void RemoveVisitorServiceListener(AnyCollectionKey key);
+
+        /// <summary>
+        /// Adds a callback to handle the updates to the Visitor ID
+        /// </summary>
+        /// <param name="callback">Action to execute when the visitor is updated</param>
+        public AnyCollectionKey AddVisitorIdListener(Action<string> callback);
+
+        /// <summary>
+        /// Removes a previously added callback to handle the updates to the Visitor ID
+        /// </summary>
+        /// <param name="key">The key returned when adding the listener</param>
+        public void RemoveVisitorIdListener(AnyCollectionKey key);
 
         /// <summary>
         /// Adds a callback to handle expiration of consent.
@@ -92,7 +104,7 @@ namespace Tealium
         /// <summary>
         /// Removes a previously added a callback to handle expiration of consent.
         /// </summary>
-        /// <param name="callback">Action to execute when consent has expired</param>
+        /// <param name="key">The key returned when adding the listener</param>
         void RemoveConsentExpiryListener(AnyCollectionKey key);
 
 
@@ -130,5 +142,20 @@ namespace Tealium
         /// </summary>
         /// <returns></returns>
         List<ConsentCategory>? GetConsentCategories();
+
+        /// <summary>
+        /// Clears the stored visitorIds and resets the current visitorId. Mainly for legal compliance reasons.
+        ///
+        /// This will also automatically reset the current visitorIds.
+        /// Visitor Ids will still get stored in future, as long as the visitorIdentityKey is passed in the config and the dataLayer contains that key.
+        ///
+        /// - Warning: In order to avoid storing the newly reset visitorId with the current identity right after the storage is cleared, the identity key must be previously deleted from the data layer.
+        /// </summary>
+        public void ClearStoredVisitorIds();
+
+        /// <summary>
+        /// Resets the Tealium Visitor Id
+        /// </summary>
+        public void ResetVisitorId();
     }
 }
